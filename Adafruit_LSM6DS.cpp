@@ -583,12 +583,12 @@ void Adafruit_LSM6DS::configInt2(bool drdy_temp, bool drdy_g, bool drdy_xl) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the LSM6DS's gyroscope sensor
+    @brief  Gets the sensor_adafruit_t data for the LSM6DS's gyroscope sensor
 */
 /**************************************************************************/
-void Adafruit_LSM6DS_Gyro::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_LSM6DS_Gyro::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "LSM6DS_G", sizeof(sensor->name) - 1);
@@ -618,12 +618,12 @@ bool Adafruit_LSM6DS_Gyro::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the LSM6DS's accelerometer
+    @brief  Gets the sensor_adafruit_t data for the LSM6DS's accelerometer
 */
 /**************************************************************************/
-void Adafruit_LSM6DS_Accelerometer::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_LSM6DS_Accelerometer::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "LSM6DS_A", sizeof(sensor->name) - 1);
@@ -653,12 +653,12 @@ bool Adafruit_LSM6DS_Accelerometer::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the LSM6DS's tenperature
+    @brief  Gets the sensor_adafruit_t data for the LSM6DS's tenperature
 */
 /**************************************************************************/
-void Adafruit_LSM6DS_Temp::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_LSM6DS_Temp::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "LSM6DS_T", sizeof(sensor->name) - 1);
