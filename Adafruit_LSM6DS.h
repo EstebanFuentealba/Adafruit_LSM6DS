@@ -94,7 +94,7 @@ public:
       @param parent A pointer to the LSM6DS class */
   Adafruit_LSM6DS_Temp(Adafruit_LSM6DS *parent) { _theLSM6DS = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x6D0;
@@ -111,7 +111,7 @@ public:
     _theLSM6DS = parent;
   }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x6D1;
@@ -125,7 +125,7 @@ public:
       @param parent A pointer to the LSM6DS class */
   Adafruit_LSM6DS_Gyro(Adafruit_LSM6DS *parent) { _theLSM6DS = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x6D2;
